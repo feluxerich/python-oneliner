@@ -1,0 +1,1 @@
+print(''.join([__import__('random').choice(__import__('string').printable.strip())for _ in'*'*int(input())]))
