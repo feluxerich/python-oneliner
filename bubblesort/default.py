@@ -1,11 +1,9 @@
 import random
-import time
 
 def bubblesort(lst: list[int]) -> list[int]:
-    is_sorted = False
-    index = 0
+    is_sorted: bool = False
+    index: int = 0
     iterations: int = 0
-    temp: int
     while not is_sorted:
         if index + 1 >= len(lst):
             index = 0
@@ -15,9 +13,7 @@ def bubblesort(lst: list[int]) -> list[int]:
             if iterations >= len(lst):
                 is_sorted = True
             continue
-        temp = lst[index]
-        lst[index] = lst[index + 1]
-        lst[index + 1] = temp
+        lst[index], lst[index + 1] = lst[index + 1], lst[index]
         iterations = 0
     return lst
 
